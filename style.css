@@ -1,0 +1,356 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,400,700');
+
+/* GLOBAL STYLES */
+*{
+	margin:0;
+	padding:0;
+	list-style:none;
+	box-sizing:border-box;	
+}
+	
+:root{
+	--bg-branco:#fff;
+	--nao-metal:#00EE00;
+	--gas-nobre:#66AAFF;
+	--metal-alcalino:#FFAA00;
+	--metal-alcalino-terroso:#F3F300;
+	--semimetal:#55CC88;
+	--halogenio:#00DDBB;
+	--outros-metais:#8591A2;
+	--metal-transicao:#DD9999;
+	--lantanideo:#FFAA88;
+	--actinidio:#DDAACC;
+	--letra: #000;
+
+	--liquido:rgb(214, 9, 9);
+	--gasoso:rgb(12, 9, 214);
+	--desconhecido:rgb(70, 67, 67);
+}
+
+body{
+	font:1em/1 'Montserrat', sans-serif;
+	color:rgb(255,255,255);
+	text-align:center;
+	padding:1em 5%;
+	background:var(--bg-branco);	
+}
+
+section, h1, h2,p, div{
+	color:#000;
+}
+
+.nao-metal{
+	background:var(--nao-metal);
+}
+	
+.gas-nobre{
+	background:var(--gas-nobre);
+}
+
+.metal-alcalino{
+	background:var(--metal-alcalino);
+}
+	
+.metal-alcalino-terroso{
+	background:var(--metal-alcalino-terroso);
+}
+	
+.semimetal{
+	background:var(--semimetal);
+}
+	
+.halogenio{
+	background:var(--halogenio);
+}
+	
+.outros-metais{
+	background:var(--outros-metais);
+}
+	
+.metal-transicao{
+	background:var(--metal-transicao);
+}
+	
+.lantanideo{
+	background:var(--lantanideo);
+}
+	
+.actinidio{
+	background:var(--actinidio);
+}
+
+.liquido{
+	color:var(--liquido);
+}
+
+.gasoso{
+	color:var(--gasoso);
+}
+
+.desconhecido{
+	color:var(--desconhecido);
+}
+
+
+.parte0{
+	display: grid;
+	grid-template-columns: repeat(18, 1fr);
+	position: relative;
+	margin-left: -1rem;
+	margin-bottom: -4rem;
+	width: 85rem;
+	right:0rem;
+}
+
+h1{
+	margin:.3em 0;
+	font-size:calc(3vw + 1.5rem);
+	font-weight:100;
+	text-transform:uppercase;
+	letter-spacing:-.05em;
+}
+
+h2{
+	font-size:2em;
+}
+
+
+
+/* GRID CONTAINER STYLES */
+main{
+	margin:auto;
+	max-width:45em;
+	display:flex;
+}
+
+#grid-container{
+	flex-grow:1;
+	min-width:7em;	
+}
+
+.col-hidden{
+	display:none;	
+}
+
+
+/* GRID CELL */
+section{
+	height:7em;
+	background:var(--bg-branco);	
+	border:.125rem solid;
+	border-radius:.25rem;	
+	line-height:1.25;
+	margin-bottom:.5em;
+	position:relative;
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+}
+
+
+span{
+	font-weight: bold;
+	font-size:1.3rem;
+	position:initial;
+	top:.3em;
+	left:.5em;	
+}
+
+.vazio{
+	position: relative;	
+	bottom:9.4rem;
+	width: 150px;
+	height: 150px;
+
+}
+
+p.distribuição{	
+	letter-spacing: 0.4rem;
+    position: absolute;
+    left: 3.7rem;
+    top: 0.2rem;
+	font-size:.8em;	
+}
+
+.vazio .distribuição{	
+	font-weight: bold;
+	letter-spacing: 2.4rem;
+    position: absolute;
+    left: 8.4rem;
+    bottom:.4rem;
+	font-size:.9em;
+}
+
+.vazio .nome {
+	font-size: 1rem;
+}
+
+.legenda{
+	display: grid;
+	grid-template-columns:repeat(3, 1fr);
+	grid-template-rows: repeat(5, 1fr);
+	grid-auto-flow: column;
+
+	position: relative;
+	height: 10rem;
+	width: 42rem;
+	top: -53rem;
+	left:15rem;
+
+	text-align: left;
+	font-size: 1rem;
+	flex-basis:100%;
+	line-height:1.50;	
+
+}
+
+.legenda input[type='radio'] {
+	display: none;
+}
+  
+
+
+  
+@supports (display:grid){
+	
+	/* GLOBAL STYLES */
+	
+	body{
+		font-size:.65em;
+		padding:2em;	
+	}	
+	
+	/* GRID CONTAINER STYLES */
+	main{
+		max-width:130.5em;
+		display:block;
+	}
+	
+	#grid-container{
+		display:grid;
+		grid-template-columns:repeat(18, 7em);
+		grid-gap:.25em;	
+	}
+		
+	.col-span16{
+		grid-column:span 16;
+	}
+		
+	.col-span10{
+		grid-column:span 10;
+	}
+		
+	.col-span3{
+		grid-column:span 3;
+	}
+		
+	.col-hidden{
+		display:block;
+		visibility:hidden;
+	}
+
+	nav {			
+		display:grid;
+		grid-template-columns: repeat(180, 1fr);
+		grid-template-rows: repeat(7, 1fr);
+		position: relative;
+	}
+	
+	section{
+		margin:0;
+	}
+	
+	section:hover{
+		transition:.2s;
+		transform:scale(1.5);
+		cursor:pointer;
+		z-index:2;
+	}
+
+	.a{
+		display:flex;
+		position: relative;
+		right:-1.5rem;
+		padding: 0.2rem;
+		font-size: 1.2rem;
+		bottom:-5rem;
+	}
+	.b{
+		display:flex;
+		position: relative;
+		right:-6rem;
+		bottom: -8.4rem;
+		font-size: 1.2rem;
+	}
+	.c{
+		display:grid;
+		grid-template-columns: repeat(10, 1fr);
+		position: relative;
+		width: 47rem;
+		right: -09rem;
+		bottom: -16.6rem;
+		margin-bottom: 0.3rem;
+		font-size: 1.2rem;
+	}
+	.d div {
+		display:inline;
+		position: relative;
+		left: 27.5rem;
+		top:5.5rem;
+		padding-right: 3rem;
+		font-size: 1.2rem;
+	}
+
+	
+
+	.e{
+		position: relative;
+		font-size: 1.2rem;
+		left: 40rem;
+		/* FATA ACERTA ESSE  */
+	}
+
+	.lateral {
+		display:grid;
+		position: relative;
+		right:1.2rem;
+		width: 0rem;
+		top: -61.5rem;
+	}
+	.lateral h2 {
+		padding-bottom: 0.5rem;
+		margin-top:1.5rem;
+		margin-bottom:1.5rem;
+	}
+
+	.lateralDireita {
+		display:grid;
+		position: relative;
+		right: -85rem;
+		width: 0rem;
+		top: -94.8rem;
+	}
+
+	.lateralDireita h5{
+		height: 76px;
+		color:#333;
+	}
+
+	a:link{ 
+		text-decoration:none; 
+	} 
+
+	#quadro{
+		display: inline-block;
+		margin-right: 5px;
+		vertical-align: middle;
+
+		
+		border-radius: 1px;
+		border: 1.5px solid #333;
+		height: 23px;
+		width: 23px;
+	}
+}
+	
+
