@@ -90,8 +90,6 @@ section, h1, h2,p, div{
 .desconhecido{
 	color:var(--desconhecido);
 }
-
-
 .parte0{
 	display: grid;
 	grid-template-columns: repeat(18, 1fr);
@@ -114,13 +112,11 @@ h2{
 	font-size:2em;
 }
 
-
-
 /* GRID CONTAINER STYLES */
 main{
-	margin:auto;
-	max-width:45em;
-	display:flex;
+	/* margin:auto; */
+	/* max-width:45em; */
+	/* display:flex; */
 }
 
 #grid-container{
@@ -150,7 +146,7 @@ section{
 
 span{
 	font-weight: bold;
-	font-size:1.3rem;
+	font-size:1rem;
 	position:initial;
 	top:.3em;
 	left:.5em;	
@@ -170,6 +166,17 @@ p.distribuição{
     left: 3.7rem;
     top: 0.2rem;
 	font-size:.8em;	
+}
+
+.distribuição-vazia{
+	/* letter-spacing: 0.4rem; */
+    position: relative;
+    left: 3.3rem;
+	right:1rem;
+	bottom:2.1rem;
+    /* top: 0.2rem; */
+	font-size:.70rem;	
+	transform: rotate(-270deg);
 }
 
 .vazio .distribuição{	
@@ -194,7 +201,7 @@ p.distribuição{
 	position: relative;
 	height: 10rem;
 	width: 42rem;
-	top: -53rem;
+	top: -52rem;
 	left:15rem;
 
 	text-align: left;
@@ -207,10 +214,6 @@ p.distribuição{
 .legenda input[type='radio'] {
 	display: none;
 }
-  
-
-
-  
 @supports (display:grid){
 	
 	/* GLOBAL STYLES */
@@ -289,25 +292,25 @@ p.distribuição{
 		width: 47rem;
 		right: -09rem;
 		bottom: -16.6rem;
-		margin-bottom: 0.3rem;
+		margin-bottom: -0.5rem;
 		font-size: 1.2rem;
 	}
-	.d div {
-		display:inline;
+	.d{
+		display:grid;
+		grid-template-columns: repeat(6, 1fr);
 		position: relative;
-		left: 27.5rem;
-		top:5.5rem;
-		padding-right: 3rem;
+		width: 28rem;
+		right: -47em;
+		bottom: -6.5rem;
+		margin-bottom: 1rem;
 		font-size: 1.2rem;
 	}
-
-	
-
 	.e{
 		position: relative;
+		width: 50rem;
 		font-size: 1.2rem;
-		left: 40rem;
-		/* FATA ACERTA ESSE  */
+		left: 57.2rem;
+		bottom: 0.4rem;
 	}
 
 	.lateral {
@@ -328,11 +331,11 @@ p.distribuição{
 		position: relative;
 		right: -85rem;
 		width: 0rem;
-		top: -94.8rem;
+		top: -93.2rem;
 	}
 
 	.lateralDireita h5{
-		height: 76px;
+		height: 95px;
 		color:#333;
 	}
 
